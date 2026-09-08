@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <head>
+      <div class="header">
+        <h3>Event Horizon</h3>
+        <p>Manage your events in the right way.</p>
+        <form id="locationSearch" class="location-search">
+          <input
+            type="search"
+            id="locationsearch"
+            placeholder="Search by location"
+          />
+          <button type="submit">Search</button>
+        </form>
+        <button id="darkmodebtn">Dark Mode</button>
+      </div>
+    </head>
+
+    <main class="container">
+      <section class="form-section">
+        <h2>Add New Event</h2>
+        <form id="eventForm">
+          <input
+            type="text"
+            id="eventTitle"
+            placeholder="Envet title"
+            required
+            maxlength="25"
+          />
+          <input
+            type="text"
+            id="eventlocation"
+            placeholder="Event Locattion"
+            required
+            maxlength="25"
+          />
+          <input type="date" required id="eventdate" />
+          <select id="eventPriority">
+            <option value="personal">Personal</option>
+            <option value="social">Social</option>
+            <option value="work" selected>Work</option>
+          </select>
+          <button type="submit" id="submit">Add Event</button>
+        </form>
+
+        <p id="formMessage" class="message"></p>
+      </section>
+
+      <section class="stats">
+        <div class="stat-card">
+          <span class="stat-label">WORK</span>
+          <span class="stat-value" id="worktotal">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">PERSONAL</span>
+          <span class="stat-value" id="personlatotal">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">SOCIAL</span>
+          <span class="stat-value" id="socialtotal">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">All</span>
+          <span class="stat-value" id="Allproperity">0</span>
+        </div>
+      </section>
+
+      <section class="filter-section">
+        <div id="contbtn">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="work">Work</button>
+          <button class="filter-btn" data-filter="social">Social</button>
+          <button class="filter-btn" data-filter="personal">personal</button>
+        </div>
+      </section>
+
+      <section class="event-list" id="eventtid">
+        <h2>My Events</h2>
+      </section>
+    </main>
+
+    <script src="logic.js"></script>
+  </body>
+</html>
