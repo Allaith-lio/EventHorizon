@@ -101,7 +101,6 @@ const createEvent = (event, index) => {
       <p class="dateEvent ${getEventDate(date)} ">${date}</p>
       <p>Priority: ${event.priority}</p>
       <button type="submit" class="deletebtn" id="btnDelete"  data-index="${index}">❌</button>
-      <p>Priority: ${eventday}</p>
     </div>
   `;
 };
